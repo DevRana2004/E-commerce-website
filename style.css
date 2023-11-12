@@ -1,0 +1,308 @@
+@media(min-width:768px)
+{
+
+}
+@media(min-width:767px)
+{
+
+}
+*{padding:0 ;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    scroll-behavior :smooth;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Akaya Kanadaka', cursive; */
+
+}
+.root{
+     --primary : red;
+     --secondary :black;
+     --light:#2f3640;
+}
+header{
+     width :100%;
+     height:100vh;
+     /* veiow port for equal 100% width with height */
+}
+
+.nav1 {
+    width:100%;
+    height:80px;
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+     text-align: center;
+    box-shadow: 2px opx 3px grey;
+    /* padding: 10%; */
+    /* border: 2px solid #000; */
+
+}
+
+ .left {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+.spacer {
+    margin: 0 10px;
+}
+.nav1 .left a{
+    text-decoration: none;
+    font-weight: bold; 
+    margin: 0px 5px;
+    color: red;
+} 
+.right{
+    flex-basis: 50%;
+    /* it is just for increasing number or text in part of block */
+    /* width: 50px; */
+}
+
+.right i{
+     font-size: 20px;
+     margin: 0px 10px;
+    background-color: rgb(224, 135, 135);
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s ease-in-out; 
+}
+.nav1 .right i:hover{
+    transform: rotate(360deg);
+} 
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    /* horizontaly mathi item ne vatrtically lave  | thi - aam ma lave  */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.nav2 .nav2-left,.nav2-center,.nav2-right{
+flex-basis: 30%;
+margin: auto;
+cursor: pointer;
+text-decoration: none;
+}
+.nav2 .nav2-left a{
+    color: black;
+
+}
+.nav2 .nav2-center h1{
+    color: red;
+}
+.nav2 .nav2-center span{
+    color: rgb(7, 6, 6);
+} 
+.nav2 .nav2-right i{
+    margin:  5px;
+}
+
+.nav3 a
+{ width: 100%;
+    height: 70px;
+    text-decoration: none;
+    line-height:70px ;
+}
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+    
+}
+.nav3 ul li{
+   display: inline-block; 
+   /* it is same as text align =center or align-item =center */
+   /**************************** inline -block means all bolck in one line ***********************/
+   /* block = if use only block than that means block make new line */
+   width : 150px;
+   position: relative;
+   z-index: 1;
+}
+.nav3 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight:500 ;
+    display: block;
+}
+.nav3 ul li a:hover{
+    color: red;
+}
+.nav3 ul li i{
+    color: red;
+    margin: 5px;
+}
+.nav3 ul ul{
+    position:absolute;
+
+    top: 70px;
+    left: 0;
+    display: none;
+}
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom:1px solid;
+   
+}
+.nav3 ul li:hover>ul{
+    display:block ;
+}
+
+.featured{
+    width:100% ;
+    height:60vh ;
+    display: flex;
+    /* background :url('g1.jpg'); */
+    background:linear-gradient(to right,
+    rgba(0,0,0,1)20% ,rgb(255, 255, 255,0.2)),
+                 url('g1.jpg');
+    background-size: cover;
+
+    background-position: top;
+    position: relative; 
+    
+
+}
+.featured-text{
+      margin-top: 18%;
+      width: 40%;
+    text-align: center;
+    top: 500%;
+    color: aliceblue;
+    font-family: cursive;
+
+}
+.featured-text button{
+padding: 5%;
+background-color: rgb(0, 0, 0);
+color: white;
+border: none;
+outline: none;
+
+}
+.latest{
+    padding: 50px 100px;
+}
+.product-intro h1{
+    color: red;
+    letter-spacing: 0.2rem;
+    font-size : 2rem ;
+    font-weight: bold;
+}
+.product-intro h1 span{
+    color: black;
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro p{
+    color: gray;
+    margin: 1.5% 1%;
+}
+
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4%;
+
+}
+ .card-container .card{
+    flex-basis: 20%;
+    padding: auto; 
+}
+.card img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    cursor: pointer; 
+    
+} 
+.card i{
+    color: goldenrod;
+    margin:10px 0px;
+
+}
+.card button{
+    color: white;
+    background-color: rgb(31, 31, 31);
+    padding: 5px 20px;
+    margin: 5%;
+}
+.card :hover img,.card:hover h1{
+    width:110%;
+    color:red;
+}
+/* jaya re card par hover thay tyare img par effect havi joiiye */
+.card::before
+{
+    content: '20% off ';
+    
+    background-color: red;
+    color: white;
+    transform :rotate( -20deg);
+    position: absolute;
+    padding: 0px 4px;
+    line-height: 25px;
+}
+.trends{
+    padding: 50px 100px;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+.trends .swiper {
+    width: 100%;
+    
+    padding: 50px;
+  }
+
+ .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer{
+      background-color: rgb(48, 41, 41);
+      background-color: rgb(67, 58, 58);
+      /* margin: 10%; */
+      padding: 4%;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+  }
+  footer div{
+    flex-basis :30%;
+  }
+  footer h1{
+    letter-spacing: o.5serm;
+  }
+  footer h1 span{
+    color:red;
+  }
+  footer p{
+    font-size: lrem;
+   
+
+  }
+  footer i{
+    margin:0px 5px ;
+  }
+  footer span{
+    font-weight: bold;
+  }
